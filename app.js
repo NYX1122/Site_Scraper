@@ -7,12 +7,10 @@ export default async function (url) {
     const page = await browser.newPage();
     await page.goto(url, { waitUntil: 'networkidle0', timeout: 60000 });
 
-    const html = await page.content();
-
     await browser.close();
 
     console.log('Site successfully scraped.');
-    return html;
+    return page;
   } catch (error) {
     console.error('Site_Scraper encountered an error: ', error);
   }
