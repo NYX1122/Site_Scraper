@@ -20,7 +20,7 @@ export default async function (url, elementSelector) {
 
     await browser.close();
 
-    console.log('Site_Scraper successfully scraped the site: ', data);
+    console.log('Site_Scraper successfully scraped the site: ', url);
 
     return data;
   } catch (error) {
